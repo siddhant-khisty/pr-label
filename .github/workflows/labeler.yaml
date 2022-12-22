@@ -13,5 +13,5 @@ jobs:
         configuration-path: .github/labeler.yaml
         sync-labels: false
     - name: Get level
-      run: echo "The level is ${{steps.hello.outputs.level}}"
+      run: echo "The level is ${{steps.hello.outputs.Level}}"
 
