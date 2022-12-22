@@ -1,4 +1,2 @@
 team:
-  - "*/**"
-website:
-  - "website/*"
+  - "**/*"
