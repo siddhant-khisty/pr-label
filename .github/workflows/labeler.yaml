@@ -1,14 +1,17 @@
 name: "Pull Request Labeler"
 on:
-- pull_request_target
+- pull_request
 
 jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - uses: AnuragThePathak/labeler@v1.1.0
+    - id: hello
+      uses: AnuragThePathak/labeler@v1.1.0
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: .github/labeler.yaml
         sync-labels: false
+    - name: Get level
+      run: echo "The level is ${{steps.hello.outputs.level}}"
 
