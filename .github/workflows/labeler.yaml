@@ -1,6 +1,6 @@
 name: "Pull Request Labeler"
 on:
-- pull_request
+- pull_request_target
 
 jobs:
   triage:
@@ -13,5 +13,5 @@ jobs:
         configuration-path: .github/labeler.yaml
         sync-labels: false
     - name: Get level
-      run: echo "The level is ${{steps.hello.outputs.Level}}"
+      run: echo "The level is ${{ steps.hello.outputs.Level }}"
 
